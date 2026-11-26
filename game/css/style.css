@@ -1,0 +1,74 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0b1626; }
+body {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  color: #e8f2ff;
+  display: flex; justify-content: center;
+}
+#app { width: 1280px; padding: 8px 10px 6px; background: linear-gradient(#12233d, #0d1a2e); }
+#topbar {
+  display: flex; align-items: center; gap: 8px;
+  background: #1b3355; border: 2px solid #3d6a9e; border-radius: 10px;
+  padding: 8px 12px; margin-bottom: 8px;
+}
+.brand { font-size: 22px; font-weight: 900; letter-spacing: 1px; color: #ffd54f; margin-right: 6px; }
+.stat { background: #0d1a2e; border: 1px solid #3d6a9e; border-radius: 8px; padding: 4px 9px; }
+.stat .label { font-size: 10px; color: #8fb8dd; display: block; letter-spacing: 1px; }
+.stat .value { font-size: 18px; font-weight: 800; color: #fff; }
+.stat .value.low { color: #ff5252; }
+.stat .value.warn { color: #ffb74d; }
+#muteBtn { margin-left: auto; background: #0d1a2e; color: #fff; border: 1px solid #3d6a9e; border-radius: 8px; font-size: 18px; padding: 4px 10px; cursor: pointer; }
+
+#mainRow { display: flex; gap: 10px; }
+#stageWrap { flex: 0 0 880px; }
+#game { display: block; width: 880px; height: 540px; border: 2px solid #3d6a9e; border-radius: 10px; background: #87b5d9; }
+#ticker {
+  margin-top: 6px; background: #0d1a2e; border: 1px solid #3d6a9e; border-radius: 8px;
+  padding: 7px 12px; font-size: 15px; color: #ffe082; min-height: 34px;
+}
+#sidePanel {
+  flex: 1; background: #1b3355; border: 2px solid #3d6a9e; border-radius: 10px;
+  padding: 10px 12px; overflow: hidden;
+}
+#sidePanel h2 { font-size: 13px; letter-spacing: 2px; color: #ffb74d; margin: 6px 0 6px; }
+#sidePanel h2:first-child { margin-top: 0; }
+#briefPanel { background: #0d1a2e; border: 1px solid #3d6a9e; border-radius: 6px; padding: 8px 10px; font-size: 14px; line-height: 1.5; min-height: 76px; }
+#briefPanel .bName { font-weight: 900; color: #ffd54f; font-size: 15px; }
+#ringPanel { display: flex; flex-direction: column; gap: 5px; min-height: 120px; }
+.ringRow { display: flex; justify-content: space-between; background: #0d1a2e; border: 1px solid #3d6a9e; border-radius: 6px; padding: 6px 9px; font-size: 14px; }
+.ringRow .rState { font-weight: 900; }
+.rState.todo { color: #b0bec5; }
+.rState.passed { color: #66bb6a; }
+.rState.perfect { color: #ffd54f; }
+.rState.missed { color: #ef5350; }
+#weatherPanel { background: #0d1a2e; border: 1px solid #3d6a9e; border-radius: 6px; padding: 8px 10px; font-size: 14px; line-height: 1.6; min-height: 64px; }
+#weatherPanel .wBad { color: #ff8a80; font-weight: 700; }
+#cargoPanel { background: #0d1a2e; border: 1px solid #3d6a9e; border-radius: 6px; padding: 8px 10px; font-size: 14px; min-height: 64px; }
+#cargoPanel .cDone { color: #81c784; font-weight: 700; }
+.dim { color: #90a4ae; }
+.small { font-size: 12px; line-height: 1.5; margin-top: 10px; }
+
+#footer { margin-top: 8px; background: #1b3355; border: 2px solid #3d6a9e; border-radius: 10px; padding: 7px 12px; }
+#legend { display: flex; gap: 18px; font-size: 13px; margin-bottom: 4px; flex-wrap: wrap; }
+#legend .sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+.sw.ring { background: #4dd0e1; } .sw.perfect { background: #ffd54f; } .sw.storm { background: #5e35b1; }
+.sw.bird { background: #ef5350; } .sw.strip { background: #66bb6a; } .sw.fuel { background: #ff7043; }
+#controls { font-size: 13px; color: #8fb8dd; }
+
+#overlay {
+  position: fixed; inset: 0; background: rgba(8, 16, 32, 0.85);
+  display: flex; align-items: center; justify-content: center; z-index: 10;
+}
+#overlay.hidden { display: none; }
+#overlayCard {
+  width: 620px; background: #1b3355; border: 3px solid #ffd54f; border-radius: 14px;
+  padding: 28px 32px; text-align: center;
+}
+#overlayCard h1 { color: #ffd54f; font-size: 34px; letter-spacing: 2px; margin-bottom: 12px; }
+#overlayCard p { font-size: 15px; line-height: 1.55; color: #cfe3f5; }
+#overlayStats { margin: 14px 0; font-size: 16px; font-weight: 700; color: #fff; line-height: 1.7; }
+#overlayBtn {
+  margin-top: 8px; background: #ffd54f; color: #1a2a44; border: none; border-radius: 10px;
+  font-size: 20px; font-weight: 900; padding: 12px 34px; cursor: pointer; letter-spacing: 1px;
+}
+#overlayBtn:hover { background: #ffe082; }
